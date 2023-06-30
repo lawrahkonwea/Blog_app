@@ -1,11 +1,25 @@
- <div><img src="<%= @user.photo %>" alt="User" /></div>
-  <div>
-    <h1><%= @user.name %></h1>
-    <p>Number of post: <%= @user.post_counter %></p>
+ <div class="user-container">
+ <div class="user-image" ><img src="<%= @user.photo %>" alt="User" /></div>
+  <div class="user-info">
+    <h1 class="user-name"><%= @user.name %></h1>
+    <p class="post-counter">Number of post: <%= @user.post_counter %></p>
   </div>
 </div>
- <div><h2>Bio : <%= @user.bio %></h2></div>
+ <div class="bio"><h2>Bio : <%= @user.bio %></h2></div>
 <div>
 
- <a href="<%=@user.id%>/posts/" class="button">See all posts</a>
+<% @user.three_recent_posts.each do |post| %>
+<div class="post">
+  <h1 class="post-title"><%= post.title %></h1>
+  <span class="post-text"><%= post.text %></span>
+  <div class="post-info">
+    <span>comments: <%= post.comments_counter %></span>
+    <span>Likes: <%= post.likes_counter %></span>
+  </div>
+  <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="">view this post</a></p>
+  </div>
+<% end %>
+
+ <a href="<%=@user.id%>/posts/" class="see-all-posts-button">See all posts</a>
+</div>
 </div>

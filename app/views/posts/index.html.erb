@@ -1,10 +1,14 @@
-<% @user.three_recent_posts.each do |post| %>
-  <h1><%= post.title %></h1>
-  <span><%= post.text %></span>
-  <div>
-  <span>comments: <%= post.comments_counter %></span>
-  <span>Likes: <%= post.likes_counter %></span>
+<% @posts.each do |post| %>
+<div class="post">
+  <h1 class="post-title"><%= post.title %></h1>
+  <span class="post-text"><%= post.text %></span>
+  <div class="post-info">
+    <span>comments: <%= post.comments_counter %></span>
+    <span>Likes: <%= post.likes_counter %></span>
   </div>
-  <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="">view this post</a></p>
+  <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="post-link">view this post</a></p>
   
 <% end %>
+</div>
+
+<%= link_to "New post", new_user_post_path %>

@@ -8,3 +8,19 @@
 <% @post.comments.each do |comment| %>
   <p><%= comment.author.name  %>: <%= comment.text %></p>
 <% end %>
+ 
+  <div class="comment-like-button">
+  <%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
+    <%= form.submit 'Like', class: 'single-button' %>
+  <% end %>
+  <div>
+    <%= link_to "Add Comment", new_user_post_comment_path(@post.author, @post) %>
+  </div>
+</div>
+
+<div class="comments-container-post">
+  <% @comments = @post.comments %>
+  <% @comments.each do |comment| %>
+   
+  <% end %>
+</div>

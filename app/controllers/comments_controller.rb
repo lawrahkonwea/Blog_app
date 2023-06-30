@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.new(author_id: @user.id, post: @post, text: params[:comment][:text])
     if @comment.save
-      redirect_to user_posts_path(@user, @post)
+      redirect_to user_post_path(@user.id, @post)
     else
       flash.now[:error] = 'failed to create comment'
       render :new
