@@ -1,12 +1,12 @@
 <h2>Add posts</h2>
 <%= form_with(model: @post, url: user_posts_path, method: :post) do |form| %>
-  <div class="form-container">
+  <div>
     <%= form.label :title %>
-    <%= form.text_field :title, required: true, autofocus: true, class: "form-input" %>
+    <%= form.text_field :title, required: true, autofocus: true %>
 
     <%= form.label :text %>
-    <%= form.text_area :text, required: true, autofocus: true, class: "form-input" %>
+    <%= form.text_area :text, required: true, autofocus: true %>
 
-    <%= form.submit "Create", class: "create-button" %>
+    <%= form.submit "Create"%>
   </div>
 <% end %>
