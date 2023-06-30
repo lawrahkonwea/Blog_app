@@ -1,0 +1,11 @@
+ <div><img src="<%= @user.photo %>" alt="User" /></div>
+  <div>
+    <h1><%= @user.name %></h1>
+    <p>Number of post: <%= @user.post_counter %></p>
+  </div>
+</div>
+ <div><h2>Bio : <%= @user.bio %></h2></div>
+<div>
+
+ <a href="<%=@user.id%>/posts/" class="button">See all posts</a>
+</div>

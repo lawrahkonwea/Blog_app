@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.text %></p>
+<span><%= @post.title %> : <%= @post.author.name %> </span>
+<div>
+<span>Comments: <%= @post.comments_counter %></span>
+<span>likes: <%= @post.likes_counter %></span>
+</div>
+<% @post.comments.each do |comment| %>
+  <p><%= comment.author.name  %>: <%= comment.text %></p>
+<% end %>
