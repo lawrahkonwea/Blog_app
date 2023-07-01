@@ -6,9 +6,10 @@
     <span>comments: <%= post.comments_counter %></span>
     <span>Likes: <%= post.likes_counter %></span>
   </div>
+  </div>
   <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="post-link">view this post</a></p>
   
 <% end %>
-</div>
+
 
 <%= link_to "New post", new_user_post_path %>

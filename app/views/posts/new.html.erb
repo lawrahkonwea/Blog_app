@@ -2,10 +2,10 @@
 <%= form_with(model: @post, url: user_posts_path, method: :post) do |form| %>
   <div>
     <%= form.label :title %>
-    <%= form.text_field :title, required: true, autofocus: true %>
+    <%= form.text_field :title%>
 
     <%= form.label :text %>
-    <%= form.text_area :text, required: true, autofocus: true %>
+    <%= form.text_area :text%>
 
     <%= form.submit "Create"%>
   </div>
