@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.user-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  flex: 1;
+  justify-content: space-between;
+  border: solid 1px black;
+}
+
+.post-counter {
+  justify-content: flex-end;
+}
+
+.bio {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #777;
+}
+
+.post {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.post-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.post-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+.see-all-posts-button {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button_link a {
+  text-decoration: none;
+  cursor: pointer;
+}

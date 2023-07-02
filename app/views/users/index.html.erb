@@ -1,0 +1,7 @@
+<div>
+  <h1 class="heading">Blog App</h1>
+  <%= render @users do |user| %>
+    <%= render partial: "users/user", locals: { user: user } %>
+  <% end %>
+</div>
+

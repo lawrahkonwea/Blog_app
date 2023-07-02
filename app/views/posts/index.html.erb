@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+<div class="post">
+  <h1 class="post-title"><%= post.title %></h1>
+  <span class="post-text"><%= post.text %></span>
+  <div class="post-info">
+    <span>comments: <%= post.comments_counter %></span>
+    <span>Likes: <%= post.likes_counter %></span>
+  </div>
+  </div>
+  <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="post-link">view this post</a></p>
+  
+<% end %>
+
+
+<%= link_to "New post", new_user_post_path %>
