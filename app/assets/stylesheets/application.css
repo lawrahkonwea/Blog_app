@@ -38,7 +38,7 @@
   flex: 1;
   justify-content: space-between;
   border: solid 1px black;
-} 
+}
 
 .post-counter {
   justify-content: flex-end;
@@ -82,7 +82,7 @@
   font-weight: bold;
 }
 
-.button_link a{
+.button_link a {
   text-decoration: none;
   cursor: pointer;
 }
