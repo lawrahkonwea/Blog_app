@@ -1,3 +1,4 @@
+<a class="button_link" href="/users/<%= user.id %>">
 <div class="user-container">
   <div class="user-image">
     <img src="<%= user.photo %>" alt="User">
@@ -7,5 +8,5 @@
     <h4 class="post-counter">Number of posts: <%= user.post_counter %></h4>
   </div>
 </div>
+</a>
 
-<%= link_to "View this user", user, class: "view-user-link" %>
