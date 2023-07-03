@@ -35,14 +35,18 @@
 }
 
 .user-info {
+  display: flex;
   flex: 1;
   justify-content: space-between;
-  border: solid 1px black;
+  border: solid 1px black; 
+  padding: 10px;
 }
 
 .post-counter {
+  margin-top: 60px;
   justify-content: flex-end;
 }
+
 
 .bio {
   margin-top: 10px;
@@ -69,10 +73,18 @@
 }
 
 .post-info {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
   margin-top: 10px;
   font-size: 14px;
   color: #888;
+  gap: 10px;
 }
+
+/* .post-info_comment {
+  
+} */
 
 .see-all-posts-button {
   display: block;
