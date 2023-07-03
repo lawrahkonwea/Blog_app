@@ -1,3 +1,13 @@
+<div class="user-container">
+ <div class="user-image">
+    <img src="<%= @user.photo %>" alt="User">
+  </div>
+  <div class="user-info">
+    <h2 class="user-name"><%= @user.name %></h2>
+    <h4 class="post-counter">Number of posts: <%= @user.post_counter %></h4>
+  </div>
+  </div>
+
 <% @posts.each do |post| %>
  <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="post_link"> 
   <div class="post">
