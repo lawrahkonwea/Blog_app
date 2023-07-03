@@ -9,6 +9,7 @@
 <div>
 
 <% @user.three_recent_posts.each do |post| %>
+<a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="post_link">
 <div class="post">
   <h1 class="post-title"><%= post.title %></h1>
   <span class="post-text"><%= post.text %></span>
@@ -16,8 +17,9 @@
     <span>comments: <%= post.comments_counter %></span>
     <span>Likes: <%= post.likes_counter %></span>
   </div>
-  <p><a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="">view this post</a></p>
+  
   </div>
+  </a>
 <% end %>
 
  <a href="<%=@user.id%>/posts/" class="see-all-posts-button">See all posts</a>

@@ -51,7 +51,7 @@
 }
 
 .post {
-  margin-bottom: 20px;
+  margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -82,7 +82,20 @@
   font-weight: bold;
 }
 
-.button_link a {
+.button_link {
   text-decoration: none;
   cursor: pointer;
+}
+
+.post_link {
+  text-decoration: none;
+}
+
+.comments-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.comment {
+  margin-top: 5px;
 }
